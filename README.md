@@ -2,4 +2,6 @@
 
 ## Interesting Ideas
 
-- 
+- Carpool Grocery Store
+- Marketplace for donated goods 
+-

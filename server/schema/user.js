@@ -26,7 +26,10 @@ module.exports = (sequelize, DataTypes) => {
     );
 
     user.associate = models => {
-        models.user.hasMany(models.topic, {
+        models.user.hasMany(models.donation, {
+            foreignKey: 'author_id'
+        });
+        models.user.hasMany(models.request, {
             foreignKey: 'author_id'
         });
         models.user.hasMany(models.comment, {

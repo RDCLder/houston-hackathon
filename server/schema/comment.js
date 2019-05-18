@@ -4,12 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     const comment = sequelize.define(
         'comment',
         {
-            name: {
-                type: DataTypes.STRING(20),
-                unique: true,
-                allowNull: false
-            },
-            description: DataTypes.STRING(100)
+            text: DataTypes.STRING(500),
+            hasParent: DataTypes.BOOLEAN
         },
         {
             freezeTableName: true
@@ -26,6 +22,12 @@ module.exports = (sequelize, DataTypes) => {
         });
         models.comment.belongsTo(models.request, {
             foreignKey: 'request_id'
+        });
+        models.comment.belongsTo(models.comment, {
+            foreignKey: 'parent_id'
+        });
+        models.comment.hasMany(models.comment, {
+            foreignKey: 'parent_id'
         });
     };
 

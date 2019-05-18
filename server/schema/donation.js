@@ -4,8 +4,14 @@ module.exports = (sequelize, DataTypes) => {
     const donation = sequelize.define(
         'donation',
         {
-            name: DataTypes.STRING(20),
-            description: DataTypes.STRING(100),
+            name: {
+                type: DataTypes.STRING(20),
+                allowNull: false
+            },
+            description: {
+                type: DataTypes.STRING(100),
+                allowNull: false
+            }
 
         },
         {

@@ -3,10 +3,11 @@
 module.exports = (sequelize, DataTypes) => {
     const item = sequelize.define('item',
         {
-            iname: DataTypes.STRING(30),
+            name: DataTypes.STRING(30),
             type: DataTypes.STRING(30),
-            weight: DataTypes.INTEGER,
-            location: DataTypes.STRING(30),
+            filters: DataTypes.ARRAY(DataTypes.STRING),
+            weight: DataTypes.DECIMAL,
+            zipCode: DataTypes.INTEGER(5),
             status: DataTypes.STRING(10),
         },
         {

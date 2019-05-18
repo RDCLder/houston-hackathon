@@ -1,9 +1,26 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const db = require('../schema');
+const timeAgo = require('../services/timeAgo');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('home.js', { title: 'Express' });
+router.get('/', function (req, res) {
+    let results = {};
+
+    db.category
+        .findAll({
+            include: [
+                {
+                    model: db.donation,
+                    required: true
+                },
+                {
+                    model: db.request,
+                    required: true
+                }
+            ],
+            order: [['updatedAt', 'DESC']]
+        });
+
 });
 
 module.exports = router;

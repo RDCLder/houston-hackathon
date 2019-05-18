@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     category.associate = models => {
         models.category.hasMany(models.request, {
             foreignKey: 'category_name'
-        }),
+        });
         models.category.hasMany(models.donation, {
             foreignKey: 'category_name'
-        })
+        });
     };
 
     return category;

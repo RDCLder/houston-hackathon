@@ -12,7 +12,11 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false
             }
-
+            ,
+            zipCode: {
+                type: DataTypes.INTEGER(5),
+                allowNull: false
+            }
         },
         {
             freezeTableName: true
@@ -20,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
     );
 
     donation.associate = models => {
+        models.donation.hasMany(models.item, {
+            foreignKey: 'donation_id'
+        });
         models.donation.hasMany(models.comment, {
             foreignKey: 'donation_id'
         });

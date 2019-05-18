@@ -23,6 +23,9 @@ module.exports = (sequelize, DataTypes) => {
         models.category.hasMany(models.donation, {
             foreignKey: 'category_name'
         });
+        models.category.hasMany(models.item, {
+            foreignKey: 'category_name'
+        });
     };
 
     return category;

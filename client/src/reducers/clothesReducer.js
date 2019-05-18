@@ -2,11 +2,11 @@ const initialState = {};
 
 const clothesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "":
+        case "add":
             return {};
         default:
             return state;
     }
 }
 
-export default clothesReducer();
+export default clothesReducer;

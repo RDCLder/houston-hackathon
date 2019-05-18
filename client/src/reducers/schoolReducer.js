@@ -2,11 +2,11 @@ const initialState = {};
 
 const schoolReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "":
+        case "add":
             return {};
         default:
             return state;
     }
 }
 
-export default schoolReducer();
+export default schoolReducer;

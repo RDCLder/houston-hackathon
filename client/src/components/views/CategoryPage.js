@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab, TabContainer } from 'react-bootstrap';
 import TabPanePage from './TabPane';
+import '../../styles/tabs.css';
+
 
 class CategoryPage extends React.Component {
     constructor(props) {
@@ -13,27 +15,20 @@ class CategoryPage extends React.Component {
         }
     }
 
-    // componentDidUpdate(prevState){
-    //     if (this.props.match.params.categoryType !== prevState.match.params.categoryType){
-    //         this.setState({
-    //             category: this.props.match.params.categoryType
-    //         })
-    //     }
-    // }
 
     render() {
         console.log(this.props.match.params.categoryType)
         return (
             <div className="category-box">
-              <div style = {styles.title}>
+              <div className="category-title">
                 {this.state.category}
               </div>
-              <TabContainer className="tabs-container" style={styles.tabContainer}>
+              <TabContainer className="tabs-container">
                 <Tabs id="category-tab" activeKey={this.state.key} onSelect={key => this.setState({ key })}>
-                    <Tab eventKey="requests" title="Requests">
+                    <Tab className="rTab" eventKey="requests" title="Requests">
                         <TabPanePage/>
                     </Tab>
-                    <Tab eventKey="donation" title="Donations">
+                    <Tab className="dTab" eventKey="donation" title="Donations">
                       <TabPanePage/>
                     </Tab>
                 </Tabs>
@@ -44,19 +39,25 @@ class CategoryPage extends React.Component {
     }
 }
 
-const styles = {
-    title: {
-        fontSize: '3em',
-        display: 'flex',
-        justifyContent: 'center',
-    },
-    tabContainer: {
-        display: 'flex',
-        justifyContent: 'left',
-        margin: '20px',
+// const styles = {
+//     title: {
+//         fontSize: '3em',
+//         display: 'flex',
+//         justifyContent: 'center',
+//     },
+//     tabContainer: {
+//         display: 'flex',
+//         justifyContent: 'left',
+//         margin: '20px',
     
-    }
+//     },
+//     Tab: {
+//         backgroundColor: '#dfe3ee'
+//     },
+//     Tabs: {
+//         border: 'transparent'
+//     }
 
-}
+// }
 
 export default CategoryPage

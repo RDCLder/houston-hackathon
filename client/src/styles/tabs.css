@@ -1,0 +1,36 @@
+.category-box {
+  display: flex;
+  flex-direction: column;
+}
+.nav-tabs.nav-item.show.nav-link.nav.nav-tabs.nav-link.active {
+  border-color: transparent;
+}
+.nav-item.nav-link.active{
+  border-bottom: 3px solid #3b5998;
+  font-weight: Bold;
+  width: 150px;
+  text-align: center;
+}
+.nav-item.nav-link {
+  width: 150px;
+  text-align: center;
+  border-color: transparent;
+}
+.category-title {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+
+}
+.tabs-container {
+  display: flex;
+  margin: 20px;
+
+
+}
+.rTab {
+
+}
+.dTab {
+
+}

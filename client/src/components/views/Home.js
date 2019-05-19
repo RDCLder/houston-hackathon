@@ -49,7 +49,7 @@ const styles = {
       height: '250px',
       boxShadow: '5px 10px 18px #888888',
       marginTop: '25px',
-      backgroundColor: '#dfe3ee',
+      backgroundColor: '#8b9dc3',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -71,7 +71,8 @@ const styles = {
     Cardbody: {
         textAlign: 'center',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        color: '#17252a'
         
     },
     Container: {

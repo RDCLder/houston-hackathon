@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CategoryCard from '../partials/CategoryCard'
+import CategoryCard from '../partials/CategoryCard';
 
 class Categories extends React.Component {
     constructor(props) {
@@ -31,7 +31,7 @@ class Categories extends React.Component {
 const styles = {
     title: {
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     cards: {
         display: 'flex',

@@ -32,7 +32,7 @@ class TabPanePage extends React.Component {
                         <Card.Title>Mens Blue T-Shirt</Card.Title>
                         <Card.Text style={styles.CardText}>Size Large and barely worn</Card.Text>
                         <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px'}} variant="primary">More Details</Button>
+                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
                         </div>
                       </Card.Body>
                     </Card> 
@@ -44,7 +44,7 @@ class TabPanePage extends React.Component {
                         <Card.Title>Women's Jeans</Card.Title>
                         <Card.Text style={styles.CardText}>Size 10, like new by JJ Jeans</Card.Text>
                         <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px'}}  variant="primary">More Details</Button>
+                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
                         </div>
                       </Card.Body>
                     </Card>
@@ -56,7 +56,7 @@ class TabPanePage extends React.Component {
                         <Card.Title>Teal T-Shirt</Card.Title>
                         <Card.Text style={styles.CardText}>Men's size Medium</Card.Text>
                         <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px'}} variant="primary">More Details</Button>
+                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
                         </div>
                       </Card.Body>
                     </Card>

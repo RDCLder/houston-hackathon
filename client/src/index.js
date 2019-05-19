@@ -6,7 +6,9 @@ import {Provider} from "react-redux";
 import thunk from "redux-thunk";
 import rootReducer from './reducers/rootReducer';
 import Home from './components/views/Home';
-import CategoryPage from './components/views/CategoryPage'
+import CategoryPage from './components/views/CategoryPage';
+import Details from './components/views/Details'
+import Categories from './components/views/Categories'
 
 // View Components
 import Base from './Base';
@@ -26,7 +28,9 @@ ReactDOM.render(
             <Base>
                 <Switch>
                     <Route exact path="/" component={Home}/>
+                    <Route exact path="/categories" component={Categories}/>
                     <Route path = "/category/:categoryType" component={CategoryPage}/>
+                    <Route path = "/item/:itemID" component = {Details}/>
                     <Route path="/clothes"/>
                     <Route path="/food"/>
                     <Route path="/school"/>

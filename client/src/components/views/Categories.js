@@ -32,6 +32,7 @@ const styles = {
     title: {
         display: 'flex',
         justifyContent: 'center',
+        margin:'3vh'
     },
     cards: {
         display: 'flex',

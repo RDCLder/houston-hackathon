@@ -7,8 +7,10 @@ import thunk from "redux-thunk";
 import rootReducer from './reducers/rootReducer';
 import Home from './components/views/Home';
 import CategoryPage from './components/views/CategoryPage';
-import Details from './components/views/Details'
-import Categories from './components/views/Categories'
+import Details from './components/views/Details';
+import Categories from './components/views/Categories';
+import Login from './components/views/Login';
+import Register from './components/views/Register'
 
 // View Components
 import Base from './Base';
@@ -31,6 +33,8 @@ ReactDOM.render(
                     <Route exact path="/categories" component={Categories}/>
                     <Route path = "/category/:categoryType" component={CategoryPage}/>
                     <Route path = "/:posting/:id" component = {Details}/>
+                    <Route path = "/login" component = {Login}/>
+                    <Route path = '/register' component = {Register}/>
                     <Route path="/clothes"/>
                     <Route path="/food"/>
                     <Route path="/school"/>

@@ -31,10 +31,6 @@ ReactDOM.render(
                     <Route exact path="/categories" component={Categories}/>
                     <Route path = "/category/:categoryType" component={CategoryPage}/>
                     <Route path = "/item/:itemID" component = {Details}/>
-                    <Route path="/clothes"/>
-                    <Route path="/food"/>
-                    <Route path="/school"/>
-                    <Route path="/supplies"/>
                 </Switch>
             </Base>
         </BrowserRouter>

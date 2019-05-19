@@ -4,14 +4,15 @@ module.exports = (sequelize, DataTypes) => {
     const request = sequelize.define(
         'request',
         {
-            name: {
-                type: DataTypes.STRING(20),
-                allowNull: false
-            },
-            description: {
+            title: {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
+            description: {
+                type: DataTypes.STRING(1000),
+                allowNull: false
+            },
+            filters: DataTypes.ARRAY(DataTypes.STRING),
             zipCode: {
                 type: DataTypes.INTEGER(5),
                 allowNull: false
@@ -30,10 +31,12 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'request_id'
         });
         models.request.belongsTo(models.category, {
-            foreignKey: 'category_id'
+            foreignKey: 'category_name',
+            allowNull: false
         });
         models.request.belongsTo(models.user, {
-            foreignKey: 'author_id'
+            foreignKey: 'author_id',
+            allowNull: false
         });
     };
 

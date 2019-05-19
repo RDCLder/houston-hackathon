@@ -4,15 +4,15 @@ module.exports = (sequelize, DataTypes) => {
     const donation = sequelize.define(
         'donation',
         {
-            name: {
-                type: DataTypes.STRING(20),
+            title: {
+                type: DataTypes.STRING(100),
                 allowNull: false
             },
             description: {
-                type: DataTypes.STRING(100),
+                type: DataTypes.STRING(1000),
                 allowNull: false
-            }
-            ,
+            },
+            filters: DataTypes.ARRAY(DataTypes.STRING),
             zipCode: {
                 type: DataTypes.INTEGER(5),
                 allowNull: false
@@ -31,10 +31,12 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'donation_id'
         });
         models.donation.belongsTo(models.category, {
-            foreignKey: 'category_id'
+            foreignKey: 'category_name',
+            allowNull: false
         });
         models.donation.belongsTo(models.user, {
-            foreignKey: 'author_id'
+            foreignKey: 'author_id',
+            allowNull: false
         });
     };
 

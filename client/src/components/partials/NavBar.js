@@ -24,7 +24,7 @@ class NavBar extends React.Component {
         return (
             <div>
                 <Navbar style={styles.Bar} variant="dark">
-                    <Navbar.Brand href="#home">Donation Exchange</Navbar.Brand>
+                    <Navbar.Brand href="#home"> <i style={{ fontSize: '28px', marginRight: '5px'}} class="fas fa-hands-helping"></i> Helping Hands </Navbar.Brand>
                     <Nav className="mr-auto">
                         <LinkContainer to="/">
                             <Nav.Link>Home</Nav.Link>

@@ -23,8 +23,8 @@ class NavBar extends React.Component {
 
         return (
             <div>
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Navbar style={styles.Bar} variant="dark">
+                    <Navbar.Brand href="#home">Donation Exchange</Navbar.Brand>
                     <Nav className="mr-auto">
                         <LinkContainer to="/">
                             <Nav.Link>Home</Nav.Link>
@@ -38,12 +38,23 @@ class NavBar extends React.Component {
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
+                        <Button style={styles.Button} variant="outline-info">Search</Button>
                     </Form>
                 </Navbar>
             </div>
         );
     }
+}
+
+const styles = {
+    Bar: {
+     backgroundColor: '#3b5998',
+
+    },
+    Button: {
+        borderColor: '#ffffff',
+        color: '#ffffff'
+    },
 }
 
 export default NavBar

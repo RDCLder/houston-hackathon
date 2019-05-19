@@ -30,6 +30,7 @@ ReactDOM.render(
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/categories" component={Categories}/>
                     <Route path = "/category/:categoryType" component={CategoryPage}/>
+                    <Route path = "/:posting/:id" component = {Details}/>
                     <Route path = "/item/:itemID" component = {Details}/>
                 </Switch>
             </Base>

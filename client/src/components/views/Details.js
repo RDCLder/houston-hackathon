@@ -95,7 +95,8 @@ const styles = {
         flexDirection: 'column'
     },
     contactButton: {
-        width:'100%'
+        width:'100%',
+        backgroundColor: '#3b5998'
     },
     centerComments: {
         display: 'flex',

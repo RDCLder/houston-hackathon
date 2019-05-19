@@ -16,7 +16,7 @@ const Comments = (props) => {
                     <Form.Control as="textarea" rows="3" />
                 </Form.Group>
                 <div style = {styles.submitStyle}>
-                    <Button variant="primary" type="submit">
+                    <Button style={{ background: '#3b5998'}} type="submit">
                         Submit
                     </Button>
                 </div>

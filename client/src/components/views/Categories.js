@@ -35,7 +35,8 @@ const styles = {
     },
     cards: {
         display: 'flex',
-        justifyContent:'center'
+        justifyContent:'center',
+        flexWrap:'wrap'
     }
 }
 

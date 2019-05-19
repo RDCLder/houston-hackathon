@@ -13,13 +13,13 @@ class NavBar extends React.Component {
     }
 
     render() {
-        var categoryList = this.state.categories.map(category => {
-            return (
-                <LinkContainer key = {category} to = {`/category/${category}`}>
-                        <NavDropdown.Item > {category} </NavDropdown.Item>
-                </LinkContainer>
-            )
-        });
+        // var categoryList = this.state.categories.map(category => {
+        //     return (
+        //         <LinkContainer key = {category} to = {`/category/${category}`}>
+        //                 <NavDropdown.Item > {category} </NavDropdown.Item>
+        //         </LinkContainer>
+        //     )
+        // });
 
         return (
             <div>
@@ -29,9 +29,12 @@ class NavBar extends React.Component {
                         <LinkContainer to="/">
                             <Nav.Link>Home</Nav.Link>
                         </LinkContainer>
-                        <NavDropdown title="Categories" id="collasible-nav-dropdown">
+                        <LinkContainer to="/categories">
+                            <Nav.Link>Categories</Nav.Link>
+                        </LinkContainer>
+                        {/* <NavDropdown title="Categories" id="collasible-nav-dropdown">
                             {categoryList}
-                        </NavDropdown>                        
+                        </NavDropdown>                         */}
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />

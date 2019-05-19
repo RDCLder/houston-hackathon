@@ -1,6 +1,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 class TabPanePage extends React.Component {
     constructor(props) {
@@ -31,8 +33,8 @@ class TabPanePage extends React.Component {
                       <Card.Body style={{padding: '10px'}}>
                         <Card.Title>Mens Blue T-Shirt</Card.Title>
                         <Card.Text style={styles.CardText}>Size Large and barely worn</Card.Text>
-                        <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
+                        <div style={styles.ButtonBox}>
+                          <Button href="/item/12345" style={{fontSize: '14px', backgroundColor: '#3b5998'}}>More Details</Button>
                         </div>
                       </Card.Body>
                     </Card> 
@@ -43,9 +45,9 @@ class TabPanePage extends React.Component {
                       <Card.Body style={{padding: '10px'}} >
                         <Card.Title>Women's Jeans</Card.Title>
                         <Card.Text style={styles.CardText}>Size 10, like new by JJ Jeans</Card.Text>
-                        <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
-                        </div>
+                        <div style={styles.ButtonBox}>
+                          <Button href="/item/12345" style={{fontSize: '14px', backgroundColor: '#3b5998'}}>More Details</Button>
+                        </div>      
                       </Card.Body>
                     </Card>
                   </Col>
@@ -55,9 +57,9 @@ class TabPanePage extends React.Component {
                       <Card.Body style={{padding: '10px'}}>
                         <Card.Title>Teal T-Shirt</Card.Title>
                         <Card.Text style={styles.CardText}>Men's size Medium</Card.Text>
-                        <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px', background: '#3b5998'}}>More Details</Button>
-                        </div>
+                        <div style={styles.ButtonBox}>
+                          <Button href="/item/12345" style={{fontSize: '14px', backgroundColor: '#3b5998'}}>More Details</Button>
+                        </div>                    
                       </Card.Body>
                     </Card>
                   </Col>
@@ -67,16 +69,14 @@ class TabPanePage extends React.Component {
                       <Card.Body style={{padding: '10px'}}>
                         <Card.Title>Red Heels</Card.Title>
                         <Card.Text style={styles.CardText}>Tory Birch Size 7</Card.Text>
-                        <div style={styles.ButtonBox} className="button-box">
-                          <Button style={{fontSize: '14px'}} variant="primary">More Details</Button>
+                        <div style={styles.ButtonBox}>
+                          <Button href="/item/12345" style={{fontSize: '14px', backgroundColor: '#3b5998'}}>More Details</Button>
                         </div>
                       </Card.Body>
                     </Card>
                   </Col>
                 </Row>
               </Container>
-           
-            
           </div>
         
         );

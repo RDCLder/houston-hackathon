@@ -75,8 +75,9 @@ class TabPanePage extends React.Component {
                         <Card.Text style={styles.CardText}>Tory Birch Size 7</Card.Text>
                         <div style={styles.ButtonBox} className="button-box">
                         <LinkContainer to = '/item/12345'>
-                          <Button style={{fontSize: '14px'}} variant="primary">More Details</Button>
-                        </LinkContainer>                        </div>
+                          <Button style={{fontSize: '14px', backgroundColor:'blue'}} >More Details</Button>
+                        </LinkContainer>
+                        </div>
                       </Card.Body>
                     </Card>
                   </Col>

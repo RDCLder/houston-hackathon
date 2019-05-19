@@ -31,7 +31,8 @@ class Categories extends React.Component {
 const styles = {
     title: {
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin:'3vh'
     },
     cards: {
         display: 'flex',

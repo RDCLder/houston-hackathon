@@ -36,10 +36,11 @@ class NavBar extends React.Component {
                             {categoryList}
                         </NavDropdown>                         */}
                     </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button style={styles.Button} variant="outline-info">Search</Button>
-                    </Form>
+                    <Nav style = {{marginLeft:'40px'}}>
+                        <LinkContainer to="/login">
+                                <Nav.Link>Login</Nav.Link>
+                        </LinkContainer>
+                    </Nav>
                 </Navbar>
             </div>
         );

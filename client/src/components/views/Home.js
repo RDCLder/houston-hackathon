@@ -17,21 +17,24 @@ class Home extends React.Component {
                     <Col>
                       <Card style={styles.Card} className="seeking">
                         <Card.Body style={styles.Cardbody}>
-                        <h3>I want to request goods.</h3>
+                        <img src="https://img.icons8.com/ios/50/000000/volunteering-filled.png"></img>
+                        <h3>Request Goods</h3>
                         </Card.Body>
                       </Card>
                     </Col>
                     <Col>
                       <Card style={styles.Card} className="giving">
                         <Card.Body style={styles.Cardbody}>
-                            <h3>I want to donate goods.</h3>
+                        <i style={{ fontSize: '52px' }} class="fas fa-hand-holding-heart"></i>
+                            <h3>Donate Goods</h3>
                         </Card.Body>
                       </Card>
                     </Col>
                     <Col>
                       <Card style={styles.Card} className="browsing">
                         <Card.Body style={styles.Cardbody}>
-                          <h3>I want to browse donated goods.</h3>
+                        <i style={{ fontSize: '52px' }} class="fas fa-heart"></i>
+                          <h3>Browse Goods</h3>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -45,11 +48,11 @@ class Home extends React.Component {
 
 const styles = {
     Card: {
-      width: '250px',
-      height: '250px',
+      width: '150px',
+      height: '150px',
       boxShadow: '5px 10px 18px #888888',
       marginTop: '25px',
-      backgroundColor: '#8b9dc3',
+      backgroundColor: '#dfe3ee',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -64,7 +67,6 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'space-evenly',
         flexDirection: 'row',
-        height: '500px',
         margin: '40px'
        
     },
@@ -72,7 +74,7 @@ const styles = {
         textAlign: 'center',
         display: 'flex',
         alignItems: 'center',
-        color: '#17252a'
+        flexDirection: 'column'
         
     },
     Container: {

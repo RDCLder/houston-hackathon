@@ -32,7 +32,7 @@ class Details extends React.Component {
                         <Col sm={5}>
                             <h5>Donor Name</h5>
                             <h3>{this.state.productName}</h3>
-                            <Button variant="primary" style = {styles.contactButton}>Contact Donator</Button>
+                            <Button variant="primary" style = {styles.contactButton}>Contact Donor</Button>
                             <div>
                                 {this.state.itemInfo}
                             </div>
